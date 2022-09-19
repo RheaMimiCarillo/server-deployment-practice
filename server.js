@@ -9,10 +9,28 @@ module.exports = app;
 // endpoint for testHello.js stuff
 app.get('/hello', (req, res) =>
 {
-  this.response.json(
+  this.res.json(
   {
     name: 'RHEA',
   });
 });
 
-app.
+// make a response to a query
+// return a JSON object with name, and role properties
+app.get('/query', (req, res) =>
+{
+  let name = res.query.name;
+  let role = res.query.role;
+
+  res.json(
+  {
+    name,
+    role,
+  });
+})
+
+// request parameter
+app.get('/params/name', (req, res)=>
+{
+  
+});
