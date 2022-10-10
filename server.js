@@ -4,6 +4,11 @@ const express = require('express');
 
 const app = express(); // this is our app singleton
 
+app.get('/', (req, res) =>
+{
+  res.status(200).send('Oh, it\'s you.');
+})
+
 // endpoint for testHello.js stuff
 app.get('/hello', (req, res) =>
 {
