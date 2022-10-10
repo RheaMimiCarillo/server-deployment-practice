@@ -4,15 +4,13 @@ const express = require('express');
 
 const app = express(); // this is our app singleton
 
-module.exports = app;
-
 // endpoint for testHello.js stuff
 app.get('/hello', (req, res) =>
 {
   this.res.json(
-  {
-    name: 'RHEA',
-  });
+    {
+      name: 'RHEA',
+    });
 });
 
 // make a response to a query
@@ -21,16 +19,10 @@ app.get('/query', (req, res) =>
 {
   let name = res.query.name;
   let role = res.query.role;
-
-  res.json(
-  {
+  res.json({
     name,
     role,
   });
 })
 
-// request parameter
-app.get('/params/name', (req, res)=>
-{
-  
-});
+module.exports = app;
